@@ -1,3 +1,7 @@
+package storage;
+
+import model.Resume;
+
 public class ArrayStorage extends AbstractArrayStorage {
 
     private Resume[] storage = new Resume[10_000];

@@ -1,3 +1,7 @@
+package storage;
+
+import model.Resume;
+
 import java.util.Arrays;
 
 public abstract class AbstractArrayStorage implements Storage {
@@ -24,15 +28,15 @@ public abstract class AbstractArrayStorage implements Storage {
     }
 
     public Resume[] getAll() {
-        return Arrays.copyOf(storage, size);
+        return Arrays.copyOfRange(storage, 0, size);
     }
 
     public void save(Resume resume) {
         int index = getIndex(resume.getUuid());
-        if ((index) > 0) {
+        if (index >= 0) {
             System.out.println("Resume is already in storage");
         } else if (size == storage.length) {
-            System.out.println("Storage is full");
+            System.out.println("storage.Storage is full");
         } else {
             insertElement(resume, index);
             size++;

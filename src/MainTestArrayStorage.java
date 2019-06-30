@@ -1,3 +1,7 @@
+import storage.ArrayStorage;
+import model.Resume;
+
+
 public class MainTestArrayStorage {
     static final ArrayStorage ARRAY_STORAGE = new ArrayStorage();
 
